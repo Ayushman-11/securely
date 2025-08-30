@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attack Surface Map - ThreatScope AI</title>
+    <meta name="description" content="Dynamic attack surface visualization with fixed movement issues">
+    <link rel="stylesheet" href="../assets/css/threat-analysis.css?v=20250829210000">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <!-- D3.js for attack surface visualization -->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+<body>
+    <!-- Top Bar -->
+    <header class="top-bar">
+        <div class="top-bar-content">
+            <div class="top-bar-left">
+                <button class="mobile-menu-btn" onclick="toggleSidebar()" style="display: none;">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <h1 class="top-logo">
+                    <i class="fas fa-brain"></i>
+                    <span class="logo-text">ThreatScope AI</span>
+                </h1>
+            </div>
+            <div class="top-bar-right">
+                <button class="account-icon">
+                    <i class="fas fa-user-circle"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <!-- Feature Navigation -->
+        <nav class="feature-nav">
+            <a href="threat-engine.html" class="feature-btn">
+                <i class="fas fa-robot"></i>
+                <span>AI Threat Engine</span>
+            </a>
+            <a href="attack-surface.html" class="feature-btn active">
+                <i class="fas fa-project-diagram"></i>
+                <span>Attack Surface Map</span>
+            </a>
+            <a href="simulation.html" class="feature-btn">
+                <i class="fas fa-play-circle"></i>
+                <span>What If? Simulation</span>
+            </a>
+        </nav>
+    </aside>
+
+    <!-- Main Application -->
+    <main class="app-container">
+        <!-- Dynamic Attack Surface Map -->
+        <section id="attack-surface" class="feature-panel active">
+            <div class="panel-header">
+                <h2><i class="fas fa-project-diagram"></i> Digital Twin: Attack Surface Map</h2>
+                <p>Visualize how your compromised accounts connect and create attack paths</p>
+            </div>
+            
+            <div class="surface-controls">
+                <div class="legend">
+                    <div class="legend-item">
+                        <div class="node-sample clean"></div>
+                        <span>Secure</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="node-sample breached"></div>
+                        <span>Breached</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="attack-path-sample"></div>
+                        <span>Attack Path</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="attack-surface-map" class="attack-map-container">
+                <div class="map-placeholder">
+                    <i class="fas fa-project-diagram"></i>
+                    <p>Load a profile to see attack surface mapping</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Scripts -->
+    <script src="../assets/js/attack-surface-map-integrated.js"></script>
+</body>
+</html>
