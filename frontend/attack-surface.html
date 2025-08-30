@@ -11,44 +11,9 @@
     <script src="https://d3js.org/d3.v7.min.js"></script>
 </head>
 <body>
-    <!-- Top Bar -->
-    <header class="top-bar">
-        <div class="top-bar-content">
-            <div class="top-bar-left">
-                <button class="mobile-menu-btn" onclick="toggleSidebar()" style="display: none;">
-                    <i class="fas fa-bars"></i>
-                </button>
-                <h1 class="top-logo">
-                    <i class="fas fa-brain"></i>
-                    <span class="logo-text">ThreatScope AI</span>
-                </h1>
-            </div>
-            <div class="top-bar-right">
-                <button class="account-icon">
-                    <i class="fas fa-user-circle"></i>
-                </button>
-            </div>
-        </div>
-    </header>
-
-    <!-- Sidebar -->
-    <aside class="sidebar">
-        <!-- Feature Navigation -->
-        <nav class="feature-nav">
-            <a href="threat-engine.html" class="feature-btn">
-                <i class="fas fa-robot"></i>
-                <span>AI Threat Engine</span>
-            </a>
-            <a href="attack-surface.html" class="feature-btn active">
-                <i class="fas fa-project-diagram"></i>
-                <span>Attack Surface Map</span>
-            </a>
-            <a href="simulation.html" class="feature-btn">
-                <i class="fas fa-play-circle"></i>
-                <span>What If? Simulation</span>
-            </a>
-        </nav>
-    </aside>
+    <!-- Layout containers will be populated by layout.js -->
+    <div id="topbar-container"></div>
+    <div id="sidebar-container"></div>
 
     <!-- Main Application -->
     <main class="app-container">
@@ -86,6 +51,7 @@
     </main>
 
     <!-- Scripts -->
+    <script src="components/layout.js"></script>
     <script src="../assets/js/attack-surface-map-integrated.js"></script>
 </body>
 </html>
